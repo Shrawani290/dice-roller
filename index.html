@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice roller</title>
+</head>
+<style>
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: pink;
+      text-align: center;
+    }
+    
+    #dice {
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    button[type="button"] {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+    button[type="button"]:hover {
+      background-color: #3e8e41;
+    }
+    
+    button[type="button"]:active {
+      transform: scale(0.9);
+    }
+    
+        </style>
+    
+
+<body>
+    <div class="main">
+
+    
+    <img src="one.png" alt="" id="dice" height="100px" />
+    <br> <br>
+    <button type="button" onclick="rollDice()">Roll The Dice</button>
+   
+    <script>
+        const diceImg = document.getElementById("dice");
+        function rollDice() {
+            const min = 1;
+            const max = 7;
+
+            const randomNumber = Math.floor(Math.random() * (max - min)) + min;
+            switch (randomNumber) {
+                case 1: diceImg.src = "one.png";
+                    console.log(randomNumber);
+                    break;
+                case 2: diceImg.src = "two.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 3: diceImg.src = "three.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 4: diceImg.src = "four.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 5: diceImg.src = "five.png";
+                    console.log(randomNumber);
+
+                    break;
+                case 6: diceImg.src = "six.png";
+            }
+        }
+    </script>
+    </div>
+</body>
+
+</html> 
+
+ 
